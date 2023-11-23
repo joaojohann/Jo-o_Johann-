@@ -11,7 +11,7 @@
     <div class="content">
         <main id="container">
             <section>
-                <form id="frml">
+                <form id="frml" onsubmit="return logar();">
                     <label for="nome" class="form-label"><b>Nome Completo:</b></label>
                     <input type="text" id="nome" name="nome" class="rounded-input" placeholder="Digite seu nome completo"><br><br>
 
@@ -21,20 +21,50 @@
                     <label for="senha" class="form-label"><b>Senha:</b></label>
                     <input type="password" id="senha" name="senha" placeholder="Crie a sua senha" class="rounded-input"><br><br>
 
-                    <label for="confirmar senha" class="form-label"><b>Confirmar Senha:</b></label>
+                    <label for="confirmar" class="form-label"><b>Confirmar Senha:</b></label>
                     <input type="password" id="confirmar" name="confirmar" placeholder="Confirme sua senha" class="rounded-input"><br><br>
 
                     <label for="usuario" class="form-label"><b>Nome de usuário:</b></label>
-                    <input type="password" id="senha" name="senha" placeholder="Crie um nome de usuário" class="rounded-input"><br><br>
+                    <input type="text" id="usuario" name="usuario" placeholder="Crie um nome de usuário" class="rounded-input"><br><br>
 
                     <label for="telefone" class="form-label"><b>Telefone:</b></label>
-                    <input type="tel" id="telefone" name="telefone" class="rounded-input" placeholder="(xx)xxxxx-xxxx" pattern="\([0-9]{2}\) [0-9]{4,5}-[0-9]{4}" inputmode="tel"><br><br>
+                    <input type="tel" id="telefone" name="telefone" class="rounded-input" placeholder="(xx)xxxxx-xxxx"  inputmode="tel"><br><br>
 
-                    <input type="submit" value="Cadastrar" class="btn-limpar" href="cadastro.html">
+                    <input type="submit" class="rounded-input" class="btn-limpar">
                     <a href="fazerLogin.html">Já possui cadastro?</a>
                 </form>
             </section>
         </main>
     </div>
+    <script>
+        function logar() {
+    var nome = document.getElementById('nome').value;
+    var email = document.getElementById('e-mail').value;
+    var senha = document.getElementById('senha').value;
+    var confirmarSenha = document.getElementById('confirmar').value;
+    var usuario = document.getElementById('usuario').value;
+    var telefone = document.getElementById('telefone').value;
+
+    <script>
+        function logar() {
+            var nome = document.getElementById('nome').value;
+            var email = document.getElementById('e-mail').value;
+            var senha = document.getElementById('senha').value;
+            var confirmarsenha = document.getElementById('confirmar').value;
+            var usuario = document.getElementById('usuario').value;
+            var telefone = document.getElementById('telefone').value;
+
+            if (nome === "" || email === "" || senha === "" || confirmarsenha === "" || usuario === "" || telefone === "") {
+                alert('Preencha todos os campos');
+                return false;
+            } else {
+                
+                return true;
+            }
+        }
+    </script> 
+
+    </script>
+    
 </body>
 </html>
