@@ -45,26 +45,23 @@
     var usuario = document.getElementById('usuario').value;
     var telefone = document.getElementById('telefone').value;
 
-    <script>
-        function logar() {
-            var nome = document.getElementById('nome').value;
-            var email = document.getElementById('e-mail').value;
-            var senha = document.getElementById('senha').value;
-            var confirmarsenha = document.getElementById('confirmar').value;
-            var usuario = document.getElementById('usuario').value;
-            var telefone = document.getElementById('telefone').value;
+    if (nome === "" || email === "" || senha === "" || confirmarSenha === "" || usuario === "" || telefone === "") {
+        alert('Preencha todos os campos');
+        return false;
+    } else if (senha !== confirmarSenha) {
+        alert('As senhas não coincidem');
+        return false;
+    } else {
+        alert('Cadastro confirmado!');
+        // Redirecionar para outra página após o cadastro ser confirmado
+        location.href = "fazerlogin.html";
+        return true;
+    }
+}
 
-            if (nome === "" || email === "" || senha === "" || confirmarsenha === "" || usuario === "" || telefone === "") {
-                alert('Preencha todos os campos');
-                return false;
-            } else {
-                
-                return true;
-            }
-        }
-    </script> 
-
+        
     </script>
+ 
     
 </body>
 </html>
